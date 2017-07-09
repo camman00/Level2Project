@@ -8,6 +8,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import me.Connect4.Pawn.Location;
+import me.Connect4.Pawn.Pawn;
+
 @SuppressWarnings("serial")
 public class Connect4Panel extends JPanel {
 	private BufferedImage Connect4PanelImage;
@@ -25,9 +28,11 @@ public class Connect4Panel extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		g.drawImage(Connect4PanelImage, 0, 0, this);
-		g.drawImage(test, (640 / 7) - 70 - 6, 6, this);
+		g.drawImage(test, /*(int)(Math.floor(640 / 5)) + 71 - 4*/Pawn.RowToCoordinate(new Location(7,1)), 6, this);
+		//g.drawImage(test, (int)(Math.floor(640 / 6)) - 1, 6, this);
 		//640/7 = The lenght -70 is compensation and -6 is a graphic porporiton fix
 		repaint();
+		
 	}
 
 	public int getWidth() {
@@ -37,6 +42,7 @@ public class Connect4Panel extends JPanel {
 	public int getHeight() {
 		return 480;
 	}
+	
 	
 
 }

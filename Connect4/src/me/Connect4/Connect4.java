@@ -17,7 +17,7 @@ public class Connect4 {
 		frame.setVisible(true);
 		frame.setSize(connect4Panel.getWidth(), connect4Panel.getHeight() + 22);
 		frame.setResizable(false);
-		frame.setDefaultCloseOperation(3 /* Yea bru i figure dis out maaaaaaaaaan */);
+		frame.setDefaultCloseOperation(3);
 	}
 
 	public static void main(String[] args) {
